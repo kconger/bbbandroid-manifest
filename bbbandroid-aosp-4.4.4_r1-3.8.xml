@@ -23,6 +23,26 @@
   <!-- New repos for BBBAndroid -->
   <project name="bbbandroid-external-i2c_tools" path="external/i2c-tools" revision="master" remote="bbbandroid" />
 
+  <!-- Repos for BlueZ -->
+  <remote name="gcode" fetch="https://code.google.com/p/"/>
+  <remote name="korg" fetch="git://git.kernel.org/pub/scm/bluetooth/"/>
+  <project remote="korg" path="external/bluetooth/bluez" name="bluez" group="pdk" revision="master"/>
+  <project remote="korg" path="external/bluetooth/sbc" name="sbc" group="pdk" revision="master"/>
+  <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
+  <project remote="gcode" path="bionic" name="aosp-bluez.platform-bionic" group="pdk" revision="kitkat"/>
+
+  <!-- android-x86 serial GPS driver -->
+  <remote name="ax86" fetch="http://git.android-x86.org/"/>
+  <project remote="ax86" path="hardware/gps" name="platform/hardware/gps" revision="kitkat-x86"/>
+
+  <!-- Busybox -->
+  <remote  name="cyangenmod" fetch="https://github.com/CyanogenMod" />
+  <project path="external/busybox" name="android_external_busybox" remote="cyangenmod" revision="d5b63cca67f555cd6e4c9b48ce5b1569620f199e" />
+
+  <!-- PowerCape Utilities -->
+  <remote  name="kconger" fetch="https://github.com/kconger" />
+  <project path="external/powercape" name="PowerCape" remote="kconger" revision="master"/>
+
   <!-- AOSP repos (android-4.4.4_r1.0.1 branch) -->
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
@@ -32,7 +52,7 @@
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
+  <!-- <project path="bionic" name="platform/bionic" groups="pdk" /> -->
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
@@ -56,6 +76,7 @@
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" />
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
+  <remove-project name="platform/external/bluetooth/bluedroid"/>
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
