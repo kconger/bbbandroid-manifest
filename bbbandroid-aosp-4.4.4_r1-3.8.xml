@@ -2,7 +2,7 @@
 <manifest>
 
   <remote fetch="git://github.com/hendersa/" name="bbbandroid"/>
-
+  <remote  name="kconger" fetch="https://github.com/kconger" />
   <!-- BBBAndroid kernel and bootloader repos -->
   <project name="bbbandroid-kernel" path="kernel" revision="master" remote="bbbandroid" />
   <project name="bbbandroid-u-boot" path="u-boot" revision="master" remote="bbbandroid"/>
@@ -10,7 +10,7 @@
   <project name="bbbandroid-external-kernel-headers" path="external/kernel-headers" revision="master" remote="bbbandroid" />
 
   <!-- Modified BBBAndroid versions of Rowboat repos (rowboat-jb branch) -->
-  <project name="bbbandroid-vendor-ti-beagleboneblack-aosp" path="device/ti/beagleboneblack" revision="master" remote="bbbandroid" >
+  <project name="bbbandroid-vendor-ti-beagleboneblack-aosp" path="device/ti/beagleboneblack" revision="master" remote="kconger" >
     <copyfile dest="patch.sh" src="patches/patch.sh" />
   </project>
   <project name="bbbandroid-external-ti_android_utilities" path="external/ti_android_utilities" revision="master" remote="bbbandroid" />
@@ -31,16 +31,14 @@
   <project remote="gcode" path="external/bluetooth/glib" name="aosp-bluez.glib" group="pdk" revision="master"/>
   <project remote="gcode" path="bionic" name="aosp-bluez.platform-bionic" group="pdk" revision="kitkat"/>
 
-  <!-- android-x86 serial GPS driver -->
-  <remote name="ax86" fetch="http://git.android-x86.org/"/>
-  <project remote="ax86" path="hardware/gps" name="platform/hardware/gps" revision="kitkat-x86"/>
+  <!-- Serial GPS driver -->
+  <project remote="kconger" path="hardware/gps" name="android-serial-gps-driver" revision="master"/>
 
   <!-- Busybox -->
   <remote  name="cyangenmod" fetch="https://github.com/CyanogenMod" />
   <project path="external/busybox" name="android_external_busybox" remote="cyangenmod" revision="d5b63cca67f555cd6e4c9b48ce5b1569620f199e" />
 
   <!-- PowerCape Utilities -->
-  <remote  name="kconger" fetch="https://github.com/kconger" />
   <project path="external/powercape" name="PowerCape" remote="kconger" revision="master"/>
 
   <!-- AOSP repos (android-4.4.4_r1.0.1 branch) -->
