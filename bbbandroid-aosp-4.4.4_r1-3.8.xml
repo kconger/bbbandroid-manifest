@@ -8,7 +8,7 @@
   <project name="bbbandroid-u-boot" path="u-boot" revision="master" remote="bbbandroid"/>
   <project name="bbbandroid-prebuilts-gcc-linux-x86-arm-arm-gnueabihf-4_7" path="prebuilts/gcc/linux-x86/arm/arm-gnueabihf-4.7" revision="master" remote="bbbandroid" />
   <project name="bbbandroid-external-kernel-headers" path="external/kernel-headers" revision="master" remote="bbbandroid" />
-
+  <project name="backports-3.18.1-1" path="backports-3.18.1-1" revision="master" remote="kconger" />
   <!-- Modified BBBAndroid versions of Rowboat repos (rowboat-jb branch) -->
   <project name="bbbandroid-vendor-ti-beagleboneblack-aosp" path="device/ti/beagleboneblack" revision="master" remote="kconger" >
     <copyfile dest="patch.sh" src="patches/patch.sh" />
