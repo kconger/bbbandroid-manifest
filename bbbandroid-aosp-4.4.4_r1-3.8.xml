@@ -4,7 +4,7 @@
   <remote fetch="git://github.com/hendersa/" name="bbbandroid"/>
   <remote  name="kconger" fetch="https://github.com/kconger" />
   <!-- BBBAndroid kernel and bootloader repos -->
-  <project name="bbbandroid-kernel" path="kernel" revision="master" remote="bbbandroid" />
+  <project name="bbbandroid-kernel" path="kernel" revision="master" remote="kconger" />
   <project name="bbbandroid-u-boot" path="u-boot" revision="master" remote="bbbandroid"/>
   <project name="bbbandroid-prebuilts-gcc-linux-x86-arm-arm-gnueabihf-4_7" path="prebuilts/gcc/linux-x86/arm/arm-gnueabihf-4.7" revision="master" remote="bbbandroid" />
   <project name="bbbandroid-external-kernel-headers" path="external/kernel-headers" revision="master" remote="bbbandroid" />
